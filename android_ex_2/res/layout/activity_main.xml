@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="@dimen/total_width"
+        android:layout_height="@dimen/total_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="@dimen/total_width"
+            android:layout_height="@dimen/total_height"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/layout_1_top_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/large">
+            </ImageView>
+
+            <RelativeLayout
+                android:id="@+id/layout_2_midsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_1_top_image"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/layout_2a_small_image"
+                    android:layout_width="@dimen/half_width"
+                    android:layout_height="@dimen/third_height"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/small">
+                </ImageView>
+
+                <RelativeLayout
+                    android:id="@+id/layout_2b_text_button"
+                    android:layout_width="@dimen/half_width"
+                    android:layout_height="@dimen/third_height"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/layout_2a_small_image">
+
+                    <TextView
+                        android:id="@+id/layout_2bi_movie_name"
+                        android:layout_width="@dimen/half_width"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/movie_title">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/layout_2bi_release_date"
+                        android:layout_width="@dimen/half_width"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_2bi_movie_name"
+                        android:text="@string/released">
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/layout_2bii_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_2bi_release_date"
+                        android:text="@string/button_text">
+                    </Button>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/layout_3_overview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_2_midsection"
+                android:text="@string/overview_title">
+            </TextView>
+
+            <TextView
+                android:id="@+id/layout_3_overview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/third_height"
+                android:layout_below="@+id/layout_3_overview_title"
+                android:text="@string/overview_content">
+            </TextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

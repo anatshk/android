@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exercise 2 - Views</string>
+    <string name="movie_title"><b>Avengers: Infinity War</b></string>
+    <string name="button_text">Movie Trailer</string>
+    <string name="overview_title"><b>Overview:</b></string>
+    <string name="overview_content">This movie is about superheroes, Yay!</string>
+    <string name="released"><b>Released:</b> 2018-01-01</string>
+</resources>
